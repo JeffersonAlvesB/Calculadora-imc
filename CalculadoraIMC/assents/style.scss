@@ -1,0 +1,164 @@
+$corFundoDark: #04142f;
+$corFundoLight: #e8dede;
+$corBordaDark: #e8dede;
+$corBordaLight: #04142f;
+$corBotão: rgb(55, 55, 201);
+$corBotãoHover: rgb(34, 34, 137);
+$corFonteDark: white;
+$corFonteLight: #04142f;
+
+::-webkit-scrollbar {
+  width: 0.4375rem;
+  background-color: #04142f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(55, 55, 201);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $corFundoDark;
+  color: $corFonteDark;
+  transition: 500ms;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid $corBordaDark;
+  border-radius: 5px;
+  width: 25rem;
+  height: 31.25rem;
+  padding: 1.3rem;
+  margin: 3%;
+  position: relative;
+}
+
+.modo {
+  color: $corFonteDark;
+  opacity: 1;
+  margin-top: 2rem;
+}
+
+.sol_img {
+  width: 4rem;
+  object-fit: contain;
+  position: absolute;
+  top: -35px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.lua_img {
+  width: 4rem;
+  object-fit: contain;
+  position: absolute;
+  top: -35px;
+  display: none;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.titulo_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  border-bottom: 2px solid $corBordaDark;
+
+  h1 {
+    font-size: 2.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin: 1rem 0;
+  }
+  img {
+    width: 5rem;
+    object-fit: contain;
+  }
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .altura,
+  .peso {
+    width: 20.25rem;
+    padding: 0.8rem 0.2rem;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .calcular {
+    color: $corFonteDark;
+    background-color: $corBotão;
+    font-size: 1.5rem;
+    width: 20.5rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+    border: none;
+    cursor: pointer;
+    transition: 200ms;
+    border-radius: 5px;
+    &:hover {
+      background-color: $corBotãoHover;
+    }
+  }
+
+  .resultado {
+    text-align: center;
+    font-size: 1.9rem;
+    display: none;
+    margin: 1rem 0 0 0;
+  }
+}
+
+.dark_mode {
+  background-color: $corFundoLight;
+  color: $corFonteLight;
+}
+
+.container_darkmode {
+  border: 5px solid $corBordaLight;
+}
+
+.tituloImg_darkmode {
+  border-bottom: 2px solid $corBordaLight;
+}
+
+.modo_light {
+  color: $corFonteLight;
+}
+
+@media screen and (max-width: 34rem) {
+  .container {
+    max-width: 80%;
+  }
+  .titulo_img {
+    h1 {
+      font-size: 2rem;
+    }
+
+    img {
+      width: 4rem;
+    }
+  }
+
+  .calculadora {
+    .altura,
+    .peso {
+      width: 17rem;
+    }
+
+    .calcular {
+      width: 17.3987rem;
+    }
+  }
+}
