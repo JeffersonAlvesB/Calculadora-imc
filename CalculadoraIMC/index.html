@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="author" content="Jefferson Alves" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <title>CalculadoraIMC</title>
+    <link
+      rel="shortcut icon"
+      href="assents/img/imc_img.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assents/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <img class="sol_img" src="assents/img/sun.png" alt="" />
+      <img class="lua_img" src="assents/img/night-mode.png" alt="" />
+      <span class="modo">Modo Escuro: Ativado</span>
+      <section class="titulo_img">
+        <h1>CalculadoraIMC</h1>
+        <img src="assents/img/imc_img.png" alt="" />
+      </section>
+      <section class="calculadora">
+        <h2>Altura (M)</h2>
+        <input
+          class="altura"
+          type="number"
+          placeholder="Digite sua altura aqui..."
+        />
+        <h2>Peso (KG)</h2>
+        <input
+          class="peso"
+          type="number"
+          placeholder="Digite seu peso aqui..."
+        />
+        <p class="resultado"></p>
+        <input class="calcular" type="submit" value="Calcular" />
+      </section>
+    </main>
+    <script src="assents/script.js"></script>
+  </body>
+</html>
